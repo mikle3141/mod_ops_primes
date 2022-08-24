@@ -27,3 +27,7 @@
 
 allure-results/
 /lib/
+
+# my local files for memo and drafts
+/my_files
+

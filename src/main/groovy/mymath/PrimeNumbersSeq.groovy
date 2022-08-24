@@ -21,6 +21,11 @@ class PrimeNumbersSeq implements Iterator, Iterable {
         }
     }
 
+    static boolean isPrime(BigInteger number) {
+        if (number <= 0) return false; // There is supposed that all primes are positive
+        return number == new PrimeNumbersSeq().find{it >= number}
+    }
+
     private class Counter {
         public int counter
         public final int limit

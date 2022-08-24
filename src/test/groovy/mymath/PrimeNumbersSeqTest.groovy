@@ -23,4 +23,15 @@ class PrimeNumbersSeqTest extends GroovyTestCase {
         assert 2 == PrimeNumbersSeq.primeN(1)
         assert 7 == PrimeNumbersSeq.primeN(4)
     }
+
+    @Test
+    void isPrimeTest() {
+        assert PrimeNumbersSeq.isPrime(2)
+        assert !PrimeNumbersSeq.isPrime(0)
+        assert !PrimeNumbersSeq.isPrime(1)
+        assert !PrimeNumbersSeq.isPrime(-1)
+        assert !PrimeNumbersSeq.isPrime(-2)
+        assert PrimeNumbersSeq.isPrime(11)
+        assert !PrimeNumbersSeq.isPrime(10)
+    }
 }
