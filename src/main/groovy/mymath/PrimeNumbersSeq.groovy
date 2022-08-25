@@ -1,17 +1,26 @@
 package mymath
-/*
- //Typical usage:
- def sequence = new PrimeNumbersSeq()
- for (def prime in sequence) {
-  // do something with prime
- }
-*/
 
 /**
+ * Typical usage:
+ <pre>
+   def sequence = new PrimeNumbersSeq()
+   for (def prime in sequence) {
+     // do something with prime
+   }
+ </pre>
+ *
  * Good example of using:
- * assert 11 == new PrimeNumbersSeq().find{it > 10}
+ <pre>
+   assert 11 == new PrimeNumbersSeq().find{it > 10}
+ </pre>
  */
 class PrimeNumbersSeq implements Iterator, Iterable {
+    /**
+     * Нахождение простого числа под номером n. Нумерация начинается с 1.
+     *
+     * @param n номер простого числа
+     * @return простое число
+     */
     static BigInteger primeN(int n) {
         if (n <= 0) throw new IllegalArgumentException('Number of prime number has to be 1 or greater!')
         def sequence = new PrimeNumbersSeq()
@@ -21,6 +30,12 @@ class PrimeNumbersSeq implements Iterator, Iterable {
         }
     }
 
+    /**
+     * Определяет, является ли число простым.
+     *
+     * @param number тестируемое число
+     * @return true, если только число простое
+     */
     static boolean isPrime(BigInteger number) {
         if (number <= 0) return false; // There is supposed that all primes are positive
         return number == new PrimeNumbersSeq().find{it >= number}
