@@ -1,2 +1,2 @@
-rootProject.name = "mod_ops"
+rootProject.name = "primes-generator"
 
