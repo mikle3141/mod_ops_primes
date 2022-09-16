@@ -1,6 +1,7 @@
-package mymath
+package ru.chivo.mymath
 
 import org.junit.jupiter.api.Test
+import ru.chivo.mymath.PrimeNumbersSeq
 
 class PrimeNumbersSeqTest extends GroovyTestCase {
     @Test

@@ -1,4 +1,4 @@
-package mymath
+package ru.chivo.mymath
 
 /**
  * Typical usage:

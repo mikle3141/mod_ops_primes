@@ -4,8 +4,8 @@ plugins {
     `maven-publish`
 }
 
-group = "mymath"
-version = "1.0-SNAPSHOT"
+group = "ru.chivo.mymath"
+version = "1.2-SNAPSHOT"
 
 repositories {
     mavenLocal()
@@ -22,17 +22,17 @@ tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
 
-//publishing {
-//    publications {
-//        create<MavenPublication>("myLibrary") {
-//            from(components["java"])
-//        }
-//    }
-//
+publishing {
+    publications {
+        create<MavenPublication>("myLibrary") {
+            from(components["java"])
+        }
+    }
+
 //    repositories {
 //        maven {
 //            name = "myRepo"
 //            url = uri(layout.buildDirectory.dir("repo"))
 //        }
 //    }
-//}
+}
